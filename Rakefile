@@ -14,6 +14,11 @@ namespace :greeting do
   end
 end
 
+desc 'outputs ahoy to the terminal'
+task :ahoy do
+  puts "Ahoy, matey!"
+end
+
 
 namespace :db do 
   desc 'migrate changes to your database' 
