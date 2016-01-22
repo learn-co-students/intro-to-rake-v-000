@@ -30,3 +30,8 @@ desc 'drop into the Pry console'
 task :console => :environment do
   Pry.start 
 end
+
+desc 'insults you'
+task :fuckyou do
+  puts "your mother is a vacuum cleaner"
+end
