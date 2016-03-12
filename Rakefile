@@ -12,6 +12,11 @@ namespace :greeting do
   task :hola do 
     puts "hola de Rake!"
   end
+  
+  desc 'outputs mabuhay to the terminal :Tagalog'
+  task :tagaloghello do
+    puts "Mabuhay!"
+  end
 end
 
 namespace :db do 
