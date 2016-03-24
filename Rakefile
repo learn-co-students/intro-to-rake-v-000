@@ -2,6 +2,8 @@ task :environment do
   require_relative './config/environment'
 end
 
+#oh we changed something
+
 desc 'outputs hello to the terminal'
 namespace :greeting do 
   task :hello do 
