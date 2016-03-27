@@ -8,6 +8,11 @@ namespace :greeting do
     puts "hello from Rake!"
   end
 
+  desc 'puts the current time'
+  task :time do
+    puts "#{Time.now.hour} o'clock"
+  end
+
   desc 'outputs hola to the terminal'
   task :hola do 
     puts "hola de Rake!"
