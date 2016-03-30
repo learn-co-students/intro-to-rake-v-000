@@ -30,3 +30,8 @@ desc 'drop into the Pry console'
 task :console => :environment do
   Pry.start 
 end
+
+desc 'learn rake'
+task :learn_rake do
+  puts "I learned about Rake."
+end
