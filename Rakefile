@@ -29,4 +29,4 @@ end
 desc 'drop into the Pry console'
 task :console => :environment do
   Pry.start 
-end
+end  #now we can pry to test data
