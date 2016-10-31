@@ -1,4 +1,6 @@
-desc 'outputs hello to the terminal'
-task :hello do
-  puts "hello from Rake!"
+desc 'migrate changes to your database'
+namespace :db do
+  task :migrate => :environment do
+    Student.create_table
+  end
 end
