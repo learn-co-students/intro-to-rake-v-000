@@ -1,3 +1,4 @@
+# File is dependent on Student Class in student.rb
 require_relative "../lib/student.rb"
 
 Student.create(name: "Melissa", grade: "10th")
