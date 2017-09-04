@@ -1,4 +1,11 @@
 
+require 'pry'
+
+  desc 'points to dependencies'
+  task :environment do
+    require_relative 'config/environment'
+  end
+
 namespace :greeting do
 
   desc 'outputs hola to the terminal'
@@ -15,11 +22,6 @@ end
 
 namespace :db do
 
-  desc 'points to dependencies'
-  task :environment do
-    require_relative 'config/environment'
-  end
-
   desc 'migrate changes to your database'
   task :migrate => :environment do
     Student.create_table
@@ -27,12 +29,12 @@ namespace :db do
 
   desc 'seed data for created table'
   task :seed do
-    require_relative 'db/seeds'
+    require_relative './db/seeds'
   end
+
+end
 
   desc 'testing pry console'
   task :console => :environment do
     pry.start
   end
-
-end
