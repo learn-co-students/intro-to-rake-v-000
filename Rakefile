@@ -10,6 +10,7 @@ namespace :greeting do
   end
 end
 
+desc 'provides environment with DB connection'
 task :environment do
   require_relative './config/environment'
 end
