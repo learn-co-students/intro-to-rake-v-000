@@ -10,6 +10,7 @@ namespace :greeting do
   end
 end
 
+desc 'load the environment into memory'
 task :environment do
   require_relative './config/environment'
 end
