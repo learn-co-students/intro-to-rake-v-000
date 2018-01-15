@@ -9,14 +9,14 @@ namespace :greeting do
   end
 
   desc 'outputs hola to the terminal'
-  take :hola do
+  task :hola do
     puts "hola de Rake!"
   end
 end
 
 namespace :db do
   desc 'migrate changes to your database'
-  take :migrate => :environment do
+  task :migrate => :environment do
     Student.create_table
   end
 
