@@ -1,0 +1,4 @@
+db:environment
+db:seed
+greeting:hello
+greeting:hola
