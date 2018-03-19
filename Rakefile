@@ -1,3 +1,14 @@
+ desc 'console environment'
+ task :console => :environment do
+  Pry.start
+ end
+ 
+  desc 'access to config/environment file'
+ task :environment do
+  require_relative './config/environment'
+ end
+
+
 namespace :greeting do
  desc 'outputs hello to the terminal'
  task :hello do
@@ -11,14 +22,9 @@ namespace :greeting do
 end
 
 namespace :db do
- desc 'invokes the :environment task as a dependency'
+ desc 'migrate changes to your database'
  task :migrate => :environment do
   Student.create_table
- end
- 
- desc 'access to config/environment file'
- task :environment do
-  require_relative './config/environment'
  end
  
  desc 'seeds the database with dummy data from a seed file'
@@ -26,8 +32,3 @@ namespace :db do
   require_relative './db/seeds.rb'
  end
 end
-
- desc 'console environment'
- task :console => :environment do
-  Pry.start
- end
