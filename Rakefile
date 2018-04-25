@@ -4,16 +4,17 @@ task :environment do
   require_relative './config/environment'
 end
 
-desc 'outputs hello to the terminal'
 namespace :greeting do
-  task :hello do
+  desc 'outputs hello to the terminal'
+    task :hello do
+      # the code we want to be executed by this task
     puts "hello from Rake!"
   end
 
-  desc 'outputs hola to the terminal'
-  task :hola do
-    puts "hola de Rake!"
-  end
+desc 'outputs hola to the terminal'
+task :hola do
+  puts "hola de Rake!"
+end
 end
 
 
@@ -24,12 +25,15 @@ namespace :db do
   end
 
   desc 'seed the database with some dummy data'
-    task :seed do
-      require_relative './db/seeds.rb'
-    end
-end
+ task :seed do
+   require_relative './db/seeds.rb'
+ end
+ end
 
-desc 'drop into the Pry console'
-task :console => :environment do
-  Pry.start
-end
+#We'll make this task dependent on our environment task so
+#that the Student class and the database connection load first.
+ desc 'drop into the Pry console'
+ task :console => :environment do
+   Pry.start
+
+ end
