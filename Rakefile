@@ -23,8 +23,8 @@ require 'pry'
     end
 
   desc 'seed the database with some dummy data'
-  task :seed do
-    require_relative './db/seeds.rb'
+    task :seed do
+      require_relative './db/seeds.rb'
     end
   end
 
@@ -32,4 +32,3 @@ require 'pry'
   task :console => :environment do
     Pry.start
   end
-end
