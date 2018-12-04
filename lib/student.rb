@@ -4,6 +4,7 @@ class Student
 
   def happy_dance
     puts "Let's be happy"
+    puts ":D!!!!!"
   end
 
   # Remember, you can access your database connection anywhere in this class
@@ -27,7 +28,7 @@ class Student
         grade TEXT
         )
     SQL
-    DB[:conn].execute(sql) 
+    DB[:conn].execute(sql)
   end
 
   def self.drop_table
