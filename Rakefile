@@ -1,10 +1,6 @@
 require 'pry'
 
-def smile
-  puts ":D"
-end
-
-task :environment do
+task :environment do 
   require_relative './config/environment'
 end
 
@@ -36,5 +32,3 @@ desc 'drop into the Pry console'
 task console: :environment do
   Pry.start
 end
-
-

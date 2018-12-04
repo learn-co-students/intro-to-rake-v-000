@@ -2,15 +2,16 @@ require_relative "../config/environment.rb"
 
 class Student
 
-  def happy_dance
-    puts "Let's be happy"
-    puts ":D!!!!!"
+  def smile
+    puts "SMILE!!"
   end
 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
   attr_accessor :name, :grade
+
+  #COMMENT :D
 
   attr_reader :id
 
